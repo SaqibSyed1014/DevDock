@@ -2,7 +2,7 @@ import { createHead } from '@vueuse/head'
 import { createPinia } from 'pinia'
 import { createApp } from 'vue'
 import App from './App.vue'
-import './assets/index.postcss'
+import './assets/index.scss'
 import router from './router'
 
 const head = createHead()

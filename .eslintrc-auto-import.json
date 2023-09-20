@@ -78,6 +78,7 @@
     "watchPostEffect": true,
     "watchSyncEffect": true,
     "toValue": true,
-    "useSeoMeta": true
+    "useSeoMeta": true,
+    "WritableComputedRef": true
   }
 }
