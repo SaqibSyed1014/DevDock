@@ -3,8 +3,8 @@
     <div class="intro-content container mx-auto text-primary text-center">
       <h1 class="text-8xl flex flex-row flex-wrap gap-y-3 items-center justify-center font-semibold">
         <span>Get</span>&nbsp;<span>your</span>&nbsp;<span>Personalized</span>&nbsp;
-        <img src="public/img/hire_01.png" alt="Hire 01" width="165" height="190" class="rounded-[100px] shrink-0">
-        <img src="public/img/hire_02.png" alt="Hire 02" width="165" height="190" class="rounded-[100px] shrink-0">
+        <img src="/public/img/hire_01.png" alt="Hire 01" width="165" height="190" class="rounded-[100px] shrink-0">
+        <img src="/public/img/hire_02.png" alt="Hire 02" width="165" height="190" class="rounded-[100px] shrink-0">
         &nbsp;<span>Development</span>&nbsp;<span>Services</span>&nbsp; <span>Under</span>&nbsp;1 Roof
       </h1>
       <div class="pt-10">
