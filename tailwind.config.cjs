@@ -4,12 +4,16 @@ const { iconsPlugin, getIconCollections } = require('@egoist/tailwindcss-icons')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./index.html', './src/**/*.{vue,ts}'],
+  content: [
+    './index.html',
+    './src/**/*.{vue,js,ts,jsx,tsx}',
+  ],
   theme: {
     extend: {
       colors: {
-        primary: '#E18427',
-        secondary: '#273AE1'
+        primary: '#073742',
+        secondary: '#BDEDFC',
+        sky: '#EBFAFE'
       },
       backgroundColor: {
         'light': '#F4ECDC',

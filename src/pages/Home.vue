@@ -1,7 +1,7 @@
 <script setup lang="ts">
-// useRoute, useHead are automatically imported. See vite.config.ts for details.
+import Intro from "@/components/Hero.vue";
 </script>
 
 <template>
-  <div></div>
+    <Intro />
 </template>

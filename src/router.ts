@@ -1,14 +1,23 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import IndexPage from '@/pages/Home.vue'
+import DefaultLayout from '@/layout/DefaultLayout.vue'
+import Home from '@/pages/Home.vue'
 
 const routes = [
   {
     path: '/',
-    component: IndexPage,
+    component: DefaultLayout,
     meta: {
-      title: 'Vite + Vue + TypeScript + Tailwind Starter Template',
+      title: '',
     },
+    redirect: '/home',
+    children: [
+      {
+        path: '/home',
+        component: Home,
+        name: 'Home'
+      }
+    ]
   },
 ]
 
