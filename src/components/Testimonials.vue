@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-sky py-10">
+  <section class="bg-sky py-16">
     <div class="container mx-auto mb-20">
       <div class="grid grid-rows-2 grid-cols-1 lg:grid-rows-1 lg:grid-cols-2 gap-5 text-primary">
         <p class="text-lg">We are a collaborative team. We do offer solid core values and a intention meant to provide solutions, a
