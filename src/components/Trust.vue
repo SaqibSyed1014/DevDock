@@ -1,5 +1,5 @@
 <template>
-  <section class="container mx-auto">
+  <section class="container mx-auto pb-10">
     <div class="grid grid-cols-1 lg:grid-cols-2">
       <div>
         <h3 class="text-5xl font-medium text-primary leading-normal">Integrate your trust with <span

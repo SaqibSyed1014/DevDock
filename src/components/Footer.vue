@@ -1,0 +1,86 @@
+<template>
+  <footer class="bg-primary pt-14">
+    <div class="footer-banner bg-[#FFDEF7] rounded-[10px] relative overflow-hidden py-4 px-7 mx-10">
+      <img class="absolute z-1 top-0 left-0 h-full w-full object-cover opacity-5" src="/public/img/boxes_bg.png" alt="Boxes">
+      <div class="flex items-center relative z-11">
+        <img src="/public/img/right_arrow.svg" alt="Arrow">
+        <p class="text-primary font-medium text-[32px] pl-[15px]">Help us spread the word and sell good vibes. Follow!</p>
+        <div CLASS="flex gap-4 text-primary">
+          <div class="flex justify-center items-center rounded bg-white cursor-pointer w-10 h-10">
+            <span class="i-ri-facebook-fill w-6 h-6" />
+          </div>
+          <div class="flex justify-center items-center rounded bg-white cursor-pointer w-10 h-10">
+            <span class="i-mdi-twitter w-6 h-6" />
+          </div>
+          <div class="flex justify-center items-center rounded bg-white cursor-pointer w-10 h-10">
+            <span class="i-ri-instagram-fill w-6 h-6" />
+          </div>
+          <div class="flex justify-center items-center rounded bg-white cursor-pointer w-10 h-10">
+            <span class="i-mdi-linkedin w-6 h-6" />
+          </div>
+          <div class="flex justify-center items-center rounded bg-white cursor-pointer w-10 h-10">
+            <span class="i-mdi-youtube w-6 h-6" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mx-auto py-10">
+      <div class="grid grid-cols-5 text-white">
+        <div class="col-span-2">
+          <label class="text-[15px]">Email</label>
+          <p class="text-[22px] font-bold pt-3 pb-6">hello@devdock.com</p>
+          <label class="text-[15px]">Whatsapp</label>
+          <p class="text-[22px] font-bold pt-3">+92 (331) 4709729</p>
+        </div>
+        <div class="col-span-1">
+          <h5 class="text-[22px] font-bold pb-6">Company</h5>
+          <div class="flex flex-col gap-4">
+            <span v-for="link in companyLinks" :key="link" class="cursor-pointer">
+              {{ link }} <span v-if="link === 'Hire Us'" class="i-ph-arrow-up-right-light w-5 h-5 translate-y-1" />
+            </span>
+          </div>
+        </div>
+        <div class="col-span-1">
+          <h5 class="text-[22px] font-bold pb-6">Services</h5>
+          <div class="flex flex-col gap-4">
+            <span v-for="link in servicesLinks" :key="link" class="cursor-pointer">{{ link }}</span>
+          </div>
+        </div>
+        <div class="col-span-1">
+          <h5 class="text-[22px] font-bold pb-6">Resources</h5>
+          <div class="flex flex-col gap-4">
+            <span v-for="link in resourcesLinks" :key="link" class="cursor-pointer">{{ link }}</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="border-t border-[#7EABA0]">
+
+    <div class="copy-right py-[26px]">
+      <div class="container mx-auto text-center text-white">
+        <span class="border-r-2 border-[#1F5346] px-5">Privacy Policy</span>
+        <span class="px-5">Terms of Use</span>
+        <span>© Copyright 2022 ConvrtX. All Rights Reserved.</span>
+      </div>
+    </div>
+  </footer>
+</template>
+
+<script setup lang="ts">
+import { Icon } from '@iconify/vue';
+const companyLinks = ['About', 'Hire Us', 'Contact Us']
+const servicesLinks = ['Web Development', 'UI/UX', 'MVP Design', 'All Services']
+const resourcesLinks = ['Blog', 'Media Kit', 'All Time Reviews', 'Leave a review on Trust Pilot']
+</script>
+
+<style scoped>
+.footer-banner{
+  /*background: url("/public/img/boxes_bg.png"), lightgray 0% 0% / 100px 100px repeat;*/
+  /*background-image: url("/public/img/boxes_bg.png");*/
+  /*background-repeat: no-repeat;*/
+  /*background-position: 100% 100%;*/
+}
+</style>
