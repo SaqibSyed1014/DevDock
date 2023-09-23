@@ -13,7 +13,8 @@ module.exports = {
       colors: {
         primary: '#073742',
         secondary: '#BDEDFC',
-        sky: '#EBFAFE'
+        sky: '#EBFAFE',
+        pink: '#FFA2EA',
       },
       backgroundColor: {
         'light': '#F4ECDC',
