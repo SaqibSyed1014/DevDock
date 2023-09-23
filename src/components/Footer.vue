@@ -5,7 +5,7 @@
       <div class="flex items-center relative z-11">
         <img src="/public/img/right_arrow.svg" alt="Arrow">
         <p class="text-primary font-medium text-[32px] pl-[15px]">Help us spread the word and sell good vibes. Follow!</p>
-        <div CLASS="flex gap-4 text-primary">
+        <div class="flex gap-4 text-primary ml-auto">
           <div class="flex justify-center items-center rounded bg-white cursor-pointer w-10 h-10">
             <span class="i-ri-facebook-fill w-6 h-6" />
           </div>
