@@ -1,0 +1,41 @@
+<template>
+  <div class="flex flex-col border-b border-gray-200 rounded-[10px]" :class="[`bg-[${color}]`]">
+    <div class="pt-10 pb-5 px-10 w-2/4"><img src="/public/img/clients/stay_busy.png" alt="Company"></div>
+    <hr class="border-t border-black opacity-1">
+    <div class="py-5 px-10">
+      <figure class="flex items-center gap-5">
+        <img class="rounded-full w-18 h-18"
+             src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png"
+             alt="profile picture">
+        <figcaption class="space-y-0.5 text-black">
+          <div class="text-[17px] font-medium text-[#212529]">{{ userName }}</div>
+          <div class="text-[15px] opacity-5">{{ userDesc || 'N/A' }}</div>
+        </figcaption>
+      </figure>
+      <blockquote class="text-base pt-[50px] mx-auto mb-4">
+        <p class="my-4">“{{ reviews || 'N/A' }}”</p>
+      </blockquote>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import {defineProps} from "vue";
+
+defineProps({
+  color: {
+    type: String,
+    required: true
+  },
+  userName: {
+    type: String,
+    required: true
+  },
+  userDesc: { type: String },
+  reviews: { type: String }
+})
+</script>
+
+<style scoped>
+
+</style>

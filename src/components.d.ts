@@ -11,6 +11,7 @@ declare module 'vue' {
     Footer: typeof import('./components/Footer.vue')['default']
     Hero: typeof import('./components/Hero.vue')['default']
     NavBar: typeof import('./components/NavBar.vue')['default']
+    Reviews: typeof import('./components/Reviews.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Services: typeof import('./components/Services.vue')['default']
