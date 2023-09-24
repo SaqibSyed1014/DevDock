@@ -1,6 +1,6 @@
 <template>
   <section class="container mx-auto pb-10">
-    <div class="grid grid-cols-1 lg:grid-cols-2">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-12 lg:gap-0">
       <div>
         <h3 class="text-5xl font-medium text-primary leading-normal">Integrate your trust with <span
           class="rounded-[100px] bg-primary px-5 text-white">DevDock</span></h3>

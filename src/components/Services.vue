@@ -2,7 +2,7 @@
   <section class="bg-primary">
     <div class="grid grid-cols-1 lg:grid-cols-2">
       <div class="flex items-center justify-center py-[149px]">
-        <div class="w-full max-w-lg">
+        <div class="w-full max-w-md">
           <img src="/public/img/arrow.svg" alt="Up Arrow">
           <h2 class="mb-8 text-white text-5xl"><span class="text-secondary">DevDock</span> works with Companies and
             supports startups in four critical ways.</h2>
@@ -13,7 +13,7 @@
         <div class="flex">
           <div class="group w-[50%] border-2 border-b-0 border-r-0 border-white border-opacity-50 cursor-pointer hover:bg-secondary">
             <div class="flex items-center h-[400px] px-[21px]">
-              <div class="text-white">
+              <div class="text-white flex-1">
                 <span class="text-[53px] group-hover:text-primary opacity-2">1.</span>
                 <div class="pt-10 group-hover:pt-6">
                   <img src="/public/img/capital.svg" alt="Settings">
@@ -30,7 +30,7 @@
           </div>
           <div class="group w-[50%] border-2 border-b-0 border-white border-opacity-50 cursor-pointer hover:bg-secondary">
             <div class="flex items-center h-[400px] px-[21px]">
-              <div class="text-white">
+              <div class="text-white flex-1">
                 <span class="text-[53px] group-hover:text-primary opacity-2">2.</span>
                 <div class="pt-10 group-hover:pt-3">
                   <img src="/public/img/software.svg" alt="Settings">
@@ -49,7 +49,7 @@
         <div class="flex">
           <div class="group w-[50%] border-2 border-b-0 border-r-0 border-white border-opacity-50 cursor-pointer hover:bg-secondary">
             <div class="flex items-center h-[400px] px-[21px]">
-              <div class="text-white">
+              <div class="text-white flex-1">
                 <span class="text-[53px] group-hover:text-primary opacity-2">3.</span>
                 <div class="pt-10 group-hover:pt-3">
                   <img src="/public/img/capital.svg" alt="Settings">
@@ -66,7 +66,7 @@
           </div>
           <div class="group w-[50%] border-2 border-b-0 border-white border-opacity-50 cursor-pointer hover:bg-secondary">
             <div class="flex items-center h-[400px] px-[21px]">
-              <div class="text-white">
+              <div class="text-white flex-1">
                 <span class="text-[53px] group-hover:text-primary opacity-2">4.</span>
                 <div class="pt-10 group-hover:pt-3">
                   <img src="/public/img/strategy.svg" alt="Settings">

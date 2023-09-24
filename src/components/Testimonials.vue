@@ -7,7 +7,7 @@
         <div>
           <p class="text-base">Loved by clients around the world</p>
           <hr>
-          <div class="flex flex-wrap gap-10">
+          <div class="flex flex-wrap justify-around gap-10">
             <img src="/public/img/clients/Opendoor.svg" alt="Client">
             <img src="/public/img/clients/AWS.svg" alt="Client">
             <img src="/public/img/clients/UBER_3.svg" alt="Client">
@@ -21,8 +21,8 @@
       <div class="relative rounded-[40px] overflow-hidden">
         <img src="/public/img/rocket.png" alt="Rocket">
         <div class="absolute left-10 top-0 flex flex-col justify-between h-full py-10">
-          <button class="rounded-full bg-secondary text-primary  py-2.5 px-11 w-fit font-medium">Get the full effect</button>
-          <h3 class="text-white text-[80px] leading-[80px]">Feel the <br> BuzzZZz.</h3>
+          <button class="rounded-full bg-secondary text-primary md:py-2 lg:py-2.5 md:px-9 lg:px-11 text-sm md:text-base w-fit font-medium">Get the full effect</button>
+          <h3 class="text-white text-5xl lg:text-[80px] lg:leading-[80px]">Feel the <br> BuzzZZz.</h3>
           <div class="flex justify-center items-center rounded-full h-[77px] w-[77px] bg-white cursor-pointer p-3">
             <span class="i-mdi-play w-8 h-8"></span>
           </div>

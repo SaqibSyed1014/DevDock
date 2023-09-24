@@ -2,10 +2,13 @@
   <footer class="bg-primary pt-14">
     <div class="footer-banner bg-[#FFDEF7] rounded-[10px] relative overflow-hidden py-4 px-7 mx-10">
       <img class="absolute z-1 top-0 left-0 h-full w-full object-cover opacity-5" src="/public/img/boxes_bg.png" alt="Boxes">
-      <div class="flex items-center relative z-11">
-        <img src="/public/img/right_arrow.svg" alt="Arrow">
-        <p class="text-primary font-medium text-[32px] pl-[15px]">Help us spread the word and sell good vibes. Follow!</p>
-        <div class="flex gap-4 text-primary ml-auto">
+      <div class="flex items-center justify-between flex-wrap lg:flex-nowrap gap-5 relative z-11">
+        <div class="flex items-center">
+          <img src="/public/img/right_arrow.svg" alt="Arrow">
+          <p class="text-primary font-medium text-2xl md:text-[32px] pl-[15px]">Help us spread the word and sell good vibes.
+            Follow!</p>
+        </div>
+        <div class="flex mx-auto gap-4 text-primary">
           <div class="flex justify-center items-center rounded bg-white cursor-pointer w-10 h-10">
             <span class="i-ri-facebook-fill w-6 h-6" />
           </div>
@@ -26,8 +29,8 @@
     </div>
 
     <div class="container mx-auto py-10">
-      <div class="grid grid-cols-5 text-white">
-        <div class="col-span-2">
+      <div class="grid grid-cols-2 lg:grid-cols-5 gap-16 text-white">
+        <div class="col-span-1 lg:col-span-2">
           <label class="text-[15px]">Email</label>
           <p class="text-[22px] font-bold pt-3 pb-6">hello@devdock.com</p>
           <label class="text-[15px]">Whatsapp</label>

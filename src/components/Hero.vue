@@ -1,15 +1,15 @@
 <template>
   <header class="bg-sky py-20">
     <div class="intro-content container mx-auto text-primary text-center">
-      <h1 class="text-8xl flex flex-row flex-wrap gap-y-3 items-center justify-center font-semibold">
+      <h1 class="text-3xl md:text-6xl lg:text-8xl flex flex-row flex-wrap gap-y-2 lg:gap-y-3 items-center justify-center font-semibold">
         <span>Get</span>&nbsp;<span>your</span>&nbsp;<span>Personalized</span>&nbsp;
-        <img src="/public/img/hire_01.png" alt="Hire 01" width="165" height="190" class="rounded-[100px] shrink-0">&nbsp;
-        <img src="/public/img/hire_02.png" alt="Hire 02" width="165" height="190" class="rounded-[100px] shrink-0">
+        <img src="/public/img/hire_01.png" alt="Hire 01" width="165" height="190" class="rounded-[100px] shrink-0 hidden lg:block">&nbsp;
+        <img src="/public/img/hire_02.png" alt="Hire 02" width="165" height="190" class="rounded-[100px] shrink-0 hidden lg:block">
         &nbsp;<span>Development</span>&nbsp;<span>Services</span>&nbsp; <span>Under</span>&nbsp;<span>1 Roof</span>&nbsp;
         <img src="/public/img/hand.png" alt="Hand" width="160" height="88" class="rounded-[100px] shrink-0">
       </h1>
       <div class="pt-10">
-        <p class="text-2xl">Focus only on <span class="underlines-word">productivity</span> now</p>
+        <p class="text-xl lg:text-2xl">Focus only on <span class="underlines-word">productivity</span> now</p>
         <div class="pt-14">
           <AppButton class="fancy-btn mr-8">View Portfolio</AppButton>
           <AppDropdown :options="['Account', 'Settings']">Explore our Gallery</AppDropdown>
