@@ -7,12 +7,12 @@
         <div>
           <p class="text-base">Loved by clients around the world</p>
           <hr>
-          <div class="flex flex-wrap justify-around gap-10">
-            <img src="/public/img/clients/Opendoor.svg" alt="Client">
-            <img src="/public/img/clients/AWS.svg" alt="Client">
-            <img src="/public/img/clients/UBER_3.svg" alt="Client">
-            <img src="/public/img/clients/Personio.svg" alt="Client">
-            <img src="/public/img/clients/soft_bank.svg" alt="Client">
+          <div class="flex justify-around items-center gap-10">
+            <img src="/public/img/clients/shaoke.svg" alt="Client">
+            <img src="/public/img/clients/commkit.svg" alt="Client">
+            <img src="/public/img/clients/memee.svg" alt="Client">
+            <img src="/public/img/clients/blackburt.svg" alt="Client">
+            <img src="/public/img/clients/firetrust.svg" alt="Client">
           </div>
         </div>
       </div>

@@ -21,9 +21,11 @@
                     <h3 class="text-3xl font-medium pt-5 group-hover:text-black group-hover:mb-2">Design Research</h3>
                     <span class="i-mdi-arrow-right w-12 h-10 group-hover:hidden"></span>
                   </div>
-                  <p class="text-black text-sm leading-7 hidden group-hover:block">We understand that every client and project is unique. Our agency
+                  <p class="text-black text-sm leading-7 hidden group-hover:block">
+                    We understand that every client and project is unique. Our agency
                     takes a personalized approach, tailoring our services to your specific needs and goals. This ensures
-                    that the final product aligns perfectly with your vision and objectives.</p>
+                    that the final product aligns perfectly with your vision and objectives.
+                  </p>
                 </div>
               </div>
             </div>
@@ -38,9 +40,9 @@
                     <h3 class="text-3xl font-medium pt-5 group-hover:text-black group-hover:mb-2">Product Development</h3>
                     <span class="i-mdi-arrow-right w-12 h-10 group-hover:hidden"></span>
                   </div>
-                  <p class="text-black text-sm leading-7 hidden group-hover:block">We understand that every client and project is unique. Our agency
-                    takes a personalized approach, tailoring our services to your specific needs and goals. This ensures
-                    that the final product aligns perfectly with your vision and objectives.</p>
+                  <p class="text-black text-sm leading-7 hidden group-hover:block">
+                    As a renowned team of expert front-end, backend, and full stack developers, we tackle complex market challenges innovatively, pragmatically, and with a touch of unpredictability.
+                  </p>
                 </div>
               </div>
             </div>
@@ -57,9 +59,9 @@
                     <h3 class="text-3xl font-medium pt-5 group-hover:text-black group-hover:mb-2">SEO & Marketing</h3>
                     <span class="i-mdi-arrow-right w-12 h-10 group-hover:hidden"></span>
                   </div>
-                  <p class="text-black text-sm leading-7 hidden group-hover:block">We understand that every client and project is unique. Our agency
-                    takes a personalized approach, tailoring our services to your specific needs and goals. This ensures
-                    that the final product aligns perfectly with your vision and objectives.</p>
+                  <p class="text-black text-sm leading-7 hidden group-hover:block">
+                    Our experts collaborate with you to define goals and craft a strategy encompassing blogger outreach and cutting-edge content marketing. Our SEO services team can supplement your content optimization, or we can serve as your dedicated outreach squad
+                  </p>
                 </div>
               </div>
             </div>
@@ -74,9 +76,9 @@
                     <h3 class="text-3xl font-medium pt-5 group-hover:text-black group-hover:mb-2">Life Time Support</h3>
                     <span class="i-mdi-arrow-right w-12 h-10 group-hover:hidden"></span>
                   </div>
-                  <p class="text-black text-sm leading-7 hidden group-hover:block">We understand that every client and project is unique. Our agency
-                    takes a personalized approach, tailoring our services to your specific needs and goals. This ensures
-                    that the final product aligns perfectly with your vision and objectives.</p>
+                  <p class="text-black text-sm leading-7 hidden group-hover:block">
+                    Even once the development process is complete and your app is ready to launch, our guidance does not stop there. DevDock is here to make sure that you have access to the support required to execute a successful launch.
+                  </p>
                 </div>
               </div>
             </div>

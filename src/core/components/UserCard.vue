@@ -1,6 +1,8 @@
 <template>
-  <div class="flex flex-col border-b border-gray-200 rounded-[10px]" :class="[`bg-[${color}]`]">
-    <div class="pt-10 pb-5 px-10 w-2/4"><img src="/public/img/clients/stay_busy.png" alt="Company"></div>
+  <div class="flex flex-col border-b border-gray-200 rounded-[10px]" :class="[`bg-${color}`]">
+    <div class="pt-10 pb-5 px-10">
+      <img :src="`/public/img/clients/${logo}`" alt="Company">
+    </div>
     <hr class="border-t border-black opacity-1">
     <div class="py-5 px-10">
       <figure class="flex items-center gap-5">
@@ -28,6 +30,10 @@ defineProps({
     required: true
   },
   userName: {
+    type: String,
+    required: true
+  },
+  logo: {
     type: String,
     required: true
   },

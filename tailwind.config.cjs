@@ -20,6 +20,9 @@ module.exports = {
         'light': '#F4ECDC',
         'boxes': '#F6F6F6',
         'stroke': '#FFF',
+        'light-yellow': '#FDFFAD',
+        'light-pink': '#FFDEF7',
+        'light-blue': '#D1F2FD',
       },
       opacity: {
         '1': '0.1',

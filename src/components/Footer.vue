@@ -64,9 +64,11 @@
 
     <div class="copy-right py-[26px]">
       <div class="container mx-auto text-center text-white">
-        <span class="border-r-2 border-[#1F5346] px-5">Privacy Policy</span>
-        <span class="px-5">Terms of Use</span>
-        <span>© Copyright 2022 ConvrtX. All Rights Reserved.</span>
+        <div class="flex justify-center items-center gap-8">
+          <img src="/public/img/logo-white.svg" alt="DevDock in White">
+          <span class="border-r-2 border-[#1F5346] pr-5">Privacy Policy</span>
+          <span>Terms of Use</span>
+          <span>© Copyright 2022 ConvrtX. All Rights Reserved.</span></div>
       </div>
     </div>
   </footer>

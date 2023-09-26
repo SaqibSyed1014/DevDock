@@ -1,29 +1,34 @@
 <template>
-  <section class="container mx-auto">
+  <section class="container mx-auto py-20">
     <h3 class="text-5xl font-medium mx-auto text-center pb-14 w-full lg:w-2/4">See what our founders are saying! </h3>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center gap-8 pb-40">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center gap-8 pb-16">
       <template v-for="(info, index) in userReviews" :key="index">
-        <user-card
+        <UserCard
             :color="info.color"
             :user-name="info.name"
             :user-desc="info.desc"
+            :logo="info.logo"
             :reviews="info.review"
         />
       </template>
+    </div>
+    <div class="text-center">
+      <AppButton>Direct Contract</AppButton>
     </div>
   </section>
 </template>
 
 <script lang="ts" setup>
 import UserCard from "@/core/components/UserCard.vue";
+import AppButton from "@/core/components/AppButton.vue";
 
 const userReviews = [
-  { color: '#FDFFAD', name: 'Carter Olive', desc: 'Founder of StayBusy',
-    review: 'I am blown away by how dedicated ConvrtX was to supporting a founder\'s vision. The lessons I\'ve learned along the way are beyond valuable.' },
-  { color: '#FFDEF7', name: 'Xan Manning', desc: 'Founder of FitGenie',
-    review: 'The experience I have had with Convrtx has been nothing short of amazing. The Leadership and expertise at convrtx is top notch. I\'m all in “Go team Convrtx.' },
-  { color: '#D1F2FD', name: 'Micheal McNair', desc: 'Founder of SpotSwap',
-    review: 'Being new to startup world, mean’t I had a lot to learn. But ConvrtX not only positioned me corretly for investors but taught me how to raise funds too!' },
+  { color: 'light-yellow', name: 'hen (Stone) Shi', desc: 'Shaoke Logistics - CEO', logo: 'shaoke.svg',
+    review: 'I am shocked that dev dock process is super simple, and he provides proper results even though my internee manager has no problem understanding it.' },
+  { color: 'light-pink', name: 'Hammad Afridi', desc: 'Manager at Commkit', logo: 'commkit.svg',
+    review: 'Very professional. Respond well on the needs of the client. Efficient and reliable in delivering output.' },
+  { color: 'light-blue', name: 'Micheal McNair', desc: 'Founder of SpotSwap', logo: 'spotswap.svg',
+    review: 'Excellent work on the website coding, fully responsive and was very co operative in terms of making further changes after the first revision. Will be working soon again.' },
 ]
 </script>
 
