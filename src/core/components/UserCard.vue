@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col border-b border-gray-200 rounded-[10px]" :class="[`bg-${color}`]">
     <div class="pt-10 pb-5 px-10">
-      <img :src="`/public/img/clients/${logo}`" alt="Company">
+      <img :src="`/img/clients/${logo}`" alt="Company">
     </div>
     <hr class="border-t border-black opacity-1">
     <div class="py-5 px-10">
@@ -43,5 +43,13 @@ defineProps({
 </script>
 
 <style scoped>
-
+.bg-water{
+  background: #D1F2FD;
+}
+.bg-calamansi{
+  background: #FDFFAD;
+}
+.bg-lace{
+  background: #FFDEF7;
+}
 </style>

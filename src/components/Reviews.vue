@@ -23,11 +23,11 @@ import UserCard from "@/core/components/UserCard.vue";
 import AppButton from "@/core/components/AppButton.vue";
 
 const userReviews = [
-  { color: 'light-yellow', name: 'hen (Stone) Shi', desc: 'Shaoke Logistics - CEO', logo: 'shaoke.svg',
+  { color: 'calamansi', name: 'hen (Stone) Shi', desc: 'Shaoke Logistics - CEO', logo: 'shaoke.svg',
     review: 'I am shocked that dev dock process is super simple, and he provides proper results even though my internee manager has no problem understanding it.' },
-  { color: 'light-pink', name: 'Hammad Afridi', desc: 'Manager at Commkit', logo: 'commkit.svg',
+  { color: 'lace', name: 'Hammad Afridi', desc: 'Manager at Commkit', logo: 'commkit.svg',
     review: 'Very professional. Respond well on the needs of the client. Efficient and reliable in delivering output.' },
-  { color: 'light-blue', name: 'Micheal McNair', desc: 'Founder of SpotSwap', logo: 'spotswap.svg',
+  { color: 'water', name: 'Micheal McNair', desc: 'Founder of SpotSwap', logo: 'spotswap.svg',
     review: 'Excellent work on the website coding, fully responsive and was very co operative in terms of making further changes after the first revision. Will be working soon again.' },
 ]
 </script>

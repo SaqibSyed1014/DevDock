@@ -15,14 +15,14 @@ module.exports = {
         secondary: '#BDEDFC',
         sky: '#EBFAFE',
         pink: '#FFA2EA',
+        lace: '#FFDEF7',
+        water: '#D1F2FD',
+        calamansi: '#FDFFAD'
       },
       backgroundColor: {
         'light': '#F4ECDC',
         'boxes': '#F6F6F6',
         'stroke': '#FFF',
-        'light-yellow': '#FDFFAD',
-        'light-pink': '#FFDEF7',
-        'light-blue': '#D1F2FD',
       },
       opacity: {
         '1': '0.1',
