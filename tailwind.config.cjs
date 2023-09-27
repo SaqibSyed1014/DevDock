@@ -43,6 +43,9 @@ module.exports = {
         '18': '70px'
       }
     },
+    container: {
+      padding: '.5rem',
+    },
   },
   plugins: [
     require('@tailwindcss/aspect-ratio'),
