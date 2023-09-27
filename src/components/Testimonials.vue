@@ -1,18 +1,23 @@
 <template>
   <section class="bg-sky py-16">
-    <div class="container mx-auto mb-20">
+    <div class="container mx-auto lg:mb-20">
       <div class="grid grid-rows-2 grid-cols-1 lg:grid-rows-1 lg:grid-cols-2 gap-5 text-primary">
         <p class="text-lg">We are a collaborative team. We do offer solid core values and a intention meant to provide solutions, a
           dream come actual growth for the business.</p>
         <div>
-          <p class="text-base">Loved by clients around the world</p>
+          <p class="text-base pb-6">Loved by clients around the world</p>
           <hr>
-          <div class="flex justify-around items-center gap-10">
-            <img src="/public/img/clients/shaoke.svg" alt="Client">
-            <img src="/public/img/clients/commkit.svg" alt="Client">
-            <img src="/public/img/clients/memee.svg" alt="Client">
-            <img src="/public/img/clients/blackburt.svg" alt="Client">
-            <img src="/public/img/clients/firetrust.svg" alt="Client">
+          <div class="flex flex-nowrap whitespace-normal overflow-hidden py-6">
+            <div class="flex justify-around items-center horizontal-slider">
+              <div v-for="(logo, index) in clientLogos" :key="index"  class="px-5">
+                <img :src="`/img/clients/${logo.name}`" :alt="logo.alt">
+              </div>
+            </div>
+            <div class="flex justify-around items-center horizontal-slider">
+              <div v-for="(logo, index) in clientLogos" :key="index" class="px-5">
+                <img :src="`/img/clients/${logo.name}`" :alt="logo.alt">
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -35,11 +40,35 @@
 
 <script setup lang="ts">
 import { Icon } from '@iconify/vue';
+
+const clientLogos = [
+  { name: 'shaoke.svg', alt: 'Shaoke' },
+  { name: 'commkit.svg', alt: 'Commkit' },
+  { name: 'memee.svg', alt: 'MeMee' },
+  { name: 'blackburt.svg', alt: 'BlackBurt' },
+  { name: 'firetrust.svg', alt: 'FireTrust' }
+]
 </script>
 
 <style scoped lang="scss">
+.horizontal-slider{
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-name: HSlider;
+  animation-play-state: running;
+  animation-timing-function: linear;
+  flex: 0 0 auto;
+  flex-wrap: nowrap;
+}
+@keyframes HSlider {
+  0%{
+    transform: translateX(0);
+  }
+  0%{
+    transform: translateX(-100%);
+  }
+}
 hr{
-  margin: 1.5rem 0;
   border-top: 1px solid #BDEDFC;
 }
 .video-banner{
