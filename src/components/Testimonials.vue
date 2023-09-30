@@ -29,8 +29,9 @@
     <div class="video-banner md:px-7">
       <div id="image" class="relative">
         <div class="flex flex-col justify-center rounded-lg md:rounded-[40px] overflow-hidden">
-          <Parallaxy :speed="80" direction="opposite">
-            <img ref="bannerImage" src="/public/img/rocket.png" alt="Rocket">
+          <img class="block md:hidden" src="/public/img/rocket.png" alt="Rocket">
+          <Parallaxy class="hidden md:block" :speed="65" direction="opposite">
+            <img ref="bannerImage" class="parallax-effect" src="/public/img/rocket.png" alt="Rocket">
           </Parallaxy>
         </div>
         <div class="content-wrapper absolute left-3 md:left-10 top-0 flex flex-col justify-between h-full py-4 md:py-10">
@@ -100,7 +101,7 @@ hr{
   border-top: 1px solid #BDEDFC;
 }
 .video-banner{
-  img{
+  img.parallax-effect{
     transform: scale(1.1);
     transition: transform .95s cubic-bezier(.25,.46,.45,.94);
   }

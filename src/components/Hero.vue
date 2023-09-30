@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-sky py-16 md:py-20">
+  <header class="bg-sky pb-16 md:pb-20 pt-[155px]">
     <div class="intro-content container mx-auto text-primary text-center">
       <h1 class="text-4xl md:text-6xl lg:text-8xl flex flex-row flex-wrap gap-y-2 lg:gap-y-3 items-center justify-center font-semibold">
         <span>Get</span>&nbsp;<span>your</span>&nbsp;<span>Personalized</span>
