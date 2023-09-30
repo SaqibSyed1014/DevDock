@@ -9,9 +9,11 @@
         <img src="/public/img/hand.png" alt="Hand" width="160" height="88" class="w-[15%] rounded-[100px] shrink-0">
       </h1>
       <div class="pt-10">
-        <p class="text-xl lg:text-2xl">Focus only on <span class="underlines-word">productivity</span> now</p>
-        <div class="pt-14">
-          <AppButton class="fancy-btn mr-8">View Portfolio</AppButton>
+        <p class="text-lg lg:text-2xl">
+          Focus only on <span class="underlines-word">productivity</span> now
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8 pt-14">
+          <AppButton class="fancy-btn mr-5">View Portfolio</AppButton>
           <AppDropdown :options="['Account', 'Settings']">Explore our Gallery</AppDropdown>
         </div>
       </div>

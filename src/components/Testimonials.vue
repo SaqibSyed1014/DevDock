@@ -1,11 +1,15 @@
 <template>
   <section class="bg-sky py-16">
     <div class="container mx-auto lg:mb-20">
-      <div class="grid grid-rows-2 grid-cols-1 lg:grid-rows-1 lg:grid-cols-2 gap-5 text-primary">
-        <p class="text-lg">We are a collaborative team. We do offer solid core values and a intention meant to provide solutions, a
-          dream come actual growth for the business.</p>
+      <div class="grid grid-rows-2 grid-cols-1 lg:grid-rows-1 lg:grid-cols-2 gap-2 lg:gap-5 text-primary">
+        <p class="sm:text-lg">
+          We are a collaborative team. We do offer solid core values and a intention meant to provide solutions, a
+          dream come actual growth for the business.
+        </p>
         <div>
-          <p class="text-base pb-6">Loved by clients around the world</p>
+          <p class="sm:text-base pb-6">
+            Loved by clients around the world
+          </p>
           <hr>
           <div class="flex flex-nowrap whitespace-normal overflow-hidden py-6">
             <div class="flex justify-around items-center horizontal-slider">
@@ -27,7 +31,9 @@
         <img src="/public/img/rocket.png" alt="Rocket">
         <div class="content-wrapper absolute left-3 md:left-10 top-0 flex flex-col justify-between h-full py-4 md:py-10">
           <button class="rounded-full bg-secondary text-primary py-1 sm:py-2 lg:py-2.5 px-6 sm:px-7 md:px-9 lg:px-11 text-xs sm:text-sm md:text-base w-fit font-medium">Get the full effect</button>
-          <h3 class="text-white text-lg sm:text-2xl md:text-4xl lg:text-5xl lg:text-[80px] lg:leading-[80px] cursor-pointer">Feel the <br>BuzzZZz.</h3>
+          <h3 class="text-white text-xl sm:text-2xl md:text-4xl lg:text-5xl lg:text-[80px] lg:leading-[80px] cursor-pointer">
+            Feel the <br>BuzzZZz.
+          </h3>
           <button class="play-btn flex justify-center items-center rounded-full w-8 h-8 md:w-14 md:h-14 lg:h-[77px] lg:w-[77px] relative cursor-pointer">
             <div class="btn-bg" />
             <span class="btn-play-icon i-mdi-play md:w-8 md:h-8" />
@@ -64,7 +70,7 @@ const clientLogos = [
   0%{
     transform: translateX(0);
   }
-  0%{
+  100%{
     transform: translateX(-100%);
   }
 }

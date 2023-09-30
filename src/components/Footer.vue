@@ -1,12 +1,12 @@
 <template>
   <footer class="bg-primary pt-14">
-    <div class="footer-banner bg-[#FFDEF7] rounded-[10px] relative overflow-hidden py-4 px-7 mx-10">
-      <img class="absolute z-1 top-0 left-0 h-full w-full object-cover opacity-5" src="/public/img/boxes_bg.png" alt="Boxes">
+    <div class="footer-banner bg-[#FFDEF7] rounded-[10px] relative overflow-hidden py-4 px-4 md:px-7 mx-3 sm:mx-10">
+      <img class="absolute z-1 top-0 left-0 h-full w-full object-cover opacity-5" src="/img/boxes_bg.png" alt="Boxes">
       <div class="flex items-center justify-between flex-wrap lg:flex-nowrap gap-5 relative z-11">
         <div class="flex items-center">
-          <img src="/public/img/right_arrow.svg" alt="Arrow">
-          <p class="text-primary font-medium text-2xl md:text-[32px] pl-[15px]">Help us spread the word and sell good vibes.
-            Follow!</p>
+          <img class="hidden md:block" src="/img/right_arrow.svg" alt="Arrow">
+          <p class="text-center md:text-left text-primary font-medium text-xl sm:text-2xl md:text-[32px] md:pl-[15px]">
+            Help us spread the word and sell good vibes. Follow!</p>
         </div>
         <div class="flex mx-auto gap-4 text-primary">
           <div class="flex justify-center items-center rounded bg-white cursor-pointer w-10 h-10">
@@ -64,11 +64,13 @@
 
     <div class="copy-right py-[26px]">
       <div class="container mx-auto text-center text-white">
-        <div class="flex justify-center items-center gap-8">
+        <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
           <img src="/public/img/logo-white.svg" alt="DevDock in White">
-          <span class="border-r-2 border-[#1F5346] pr-5">Privacy Policy</span>
-          <span>Terms of Use</span>
-          <span>© Copyright 2022 ConvrtX. All Rights Reserved.</span></div>
+          <div>
+            <span class="border-r-2 border-[#1F5346] pr-5 mr-5">Privacy Policy</span>
+            <span>Terms of Use</span>
+          </div>
+          <span>© Copyright 2023 ConvrtX. All Rights Reserved.</span></div>
       </div>
     </div>
   </footer>

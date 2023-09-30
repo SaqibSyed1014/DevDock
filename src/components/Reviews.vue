@@ -1,6 +1,8 @@
 <template>
   <section class="container mx-auto py-20">
-    <h3 class="text-5xl font-medium mx-auto text-center pb-14 w-full lg:w-2/4">See what our founders are saying! </h3>
+    <h3 class="text-3xl sm:text-5xl font-medium mx-auto text-center pb-14 w-full lg:w-2/4">
+      See what our founders are saying!
+    </h3>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center gap-8 pb-16">
       <template v-for="(info, index) in userReviews" :key="index">
         <UserCard
