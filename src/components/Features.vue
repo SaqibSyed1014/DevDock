@@ -17,7 +17,7 @@
             >{{ feature.highlightedText }}</span>
             {{ feature.endText }}
           </h4>
-          <p class="text-sm sm:text-md leading-relaxed sm:leading-7">{{ feature.desc }}</p>
+          <p class="text-sm sm:text-lg leading-relaxed sm:leading-7">{{ feature.desc }}</p>
           <img class="mx-auto px-3 pt-7" :src="`/img/${feature.image}`" :alt="feature.alt">
         </div>
       </div>

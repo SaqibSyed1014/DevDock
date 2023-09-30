@@ -28,13 +28,27 @@
     </div>
     <div class="video-banner md:px-7">
       <div class="relative rounded-lg md:rounded-[40px] overflow-hidden">
-        <img src="/public/img/rocket.png" alt="Rocket">
+        <img ref="bannerImage" src="/public/img/rocket.png" alt="Rocket">
         <div class="content-wrapper absolute left-3 md:left-10 top-0 flex flex-col justify-between h-full py-4 md:py-10">
-          <button class="rounded-full bg-secondary text-primary py-1 sm:py-2 lg:py-2.5 px-6 sm:px-7 md:px-9 lg:px-11 text-xs sm:text-sm md:text-base w-fit font-medium">Get the full effect</button>
-          <h3 class="text-white text-xl sm:text-2xl md:text-4xl lg:text-5xl lg:text-[80px] lg:leading-[80px] cursor-pointer">
+          <button
+              class="rounded-full bg-secondary text-primary py-1 sm:py-2 lg:py-2.5 px-6 sm:px-7 md:px-9 lg:px-11 text-xs sm:text-sm md:text-base w-fit font-medium"
+              @mouseover="addHover"
+              @mouseleave="removeHover"
+          >
+            Get the full effect
+          </button>
+          <h3
+              class="text-white text-xl sm:text-2xl md:text-4xl lg:text-5xl lg:text-[80px] lg:leading-[80px] cursor-pointer"
+              @mouseover="addHover"
+              @mouseleave="removeHover"
+          >
             Feel the <br>BuzzZZz.
           </h3>
-          <button class="play-btn flex justify-center items-center rounded-full w-8 h-8 md:w-14 md:h-14 lg:h-[77px] lg:w-[77px] relative cursor-pointer">
+          <button
+              class="play-btn flex justify-center items-center rounded-full w-8 h-8 md:w-14 md:h-14 lg:h-[77px] lg:w-[77px] relative cursor-pointer"
+              @mouseover="addHover"
+              @mouseleave="removeHover"
+          >
             <div class="btn-bg" />
             <span class="btn-play-icon i-mdi-play md:w-8 md:h-8" />
           </button>
@@ -47,6 +61,7 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue';
 
+const bannerImage = ref(null)
 const clientLogos = [
   { name: 'shaoke.svg', alt: 'Shaoke' },
   { name: 'commkit.svg', alt: 'Commkit' },
@@ -54,6 +69,9 @@ const clientLogos = [
   { name: 'blackburt.svg', alt: 'BlackBurt' },
   { name: 'firetrust.svg', alt: 'FireTrust' }
 ]
+
+const addHover = () => bannerImage.value.style.transform = 'scale(1.1)'
+const removeHover = () => bannerImage.value.style.transform = 'scale(1)'
 </script>
 
 <style scoped lang="scss">
@@ -80,9 +98,6 @@ hr{
 .video-banner{
   img{
     transition: transform .95s cubic-bezier(.25,.46,.45,.94);
-  }
-  &:hover img {
-    transform: scale(1.1)
   }
   .content-wrapper{
     width: -webkit-fill-available;
