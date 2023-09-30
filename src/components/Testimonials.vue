@@ -27,8 +27,12 @@
       </div>
     </div>
     <div class="video-banner md:px-7">
-      <div class="relative rounded-lg md:rounded-[40px] overflow-hidden">
-        <img ref="bannerImage" src="/public/img/rocket.png" alt="Rocket">
+      <div id="image" class="relative">
+        <div class="flex flex-col justify-center rounded-lg md:rounded-[40px] overflow-hidden">
+          <Parallaxy :speed="80" direction="opposite">
+            <img ref="bannerImage" src="/public/img/rocket.png" alt="Rocket">
+          </Parallaxy>
+        </div>
         <div class="content-wrapper absolute left-3 md:left-10 top-0 flex flex-col justify-between h-full py-4 md:py-10">
           <button
               class="rounded-full bg-secondary text-primary py-1 sm:py-2 lg:py-2.5 px-6 sm:px-7 md:px-9 lg:px-11 text-xs sm:text-sm md:text-base w-fit font-medium"
@@ -58,8 +62,8 @@
   </section>
 </template>
 
-<script setup lang="ts">
-import { Icon } from '@iconify/vue';
+<script setup>
+import Parallaxy from '@lucien144/vue3-parallaxy';
 
 const bannerImage = ref(null)
 const clientLogos = [
@@ -70,8 +74,8 @@ const clientLogos = [
   { name: 'firetrust.svg', alt: 'FireTrust' }
 ]
 
-const addHover = () => bannerImage.value.style.transform = 'scale(1.1)'
-const removeHover = () => bannerImage.value.style.transform = 'scale(1)'
+const addHover = () => bannerImage.value.style.transform = 'scale(1.2)'
+const removeHover = () => bannerImage.value.style.transform = 'scale(1.1)'
 </script>
 
 <style scoped lang="scss">
@@ -97,6 +101,7 @@ hr{
 }
 .video-banner{
   img{
+    transform: scale(1.1);
     transition: transform .95s cubic-bezier(.25,.46,.45,.94);
   }
   .content-wrapper{

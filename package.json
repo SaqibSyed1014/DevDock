@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.16",
+    "@lucien144/vue3-parallaxy": "^0.1.1",
     "@vueuse/head": "2.0.0",
+    "aatjs": "^0.0.4",
     "gsap": "^3.12.2",
     "pinia": "2.1.4",
     "vue": "3.3.4",
