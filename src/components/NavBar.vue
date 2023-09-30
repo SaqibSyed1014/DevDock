@@ -1,14 +1,14 @@
 <template>
   <nav
-      class="relative w-full items-center bg-sky py-2 md:py-6 px-7">
+      class="relative w-full items-center bg-sky py-3 md:py-6 px-3 md:px-7">
     <div class="flex items-center justify-between">
-      <div>
-        <a
-          class="mx-2 my-1 md:mb-0 md:mt-0"
-          href="#">
-        <img src="/public/img/logo.svg" alt="DevDock Logo" class="w-3/4">
-      </a>
-      </div>
+      <figure>
+        <router-link
+            class="sm:mx-2 my-1 md:mb-0 md:mt-0"
+            to="/">
+          <img src="/public/img/logo.svg" alt="DevDock Logo" class="w-[70%] sm:w-3/4">
+        </router-link>
+      </figure>
 
       <!-- Collapsible navbar container -->
       <div class="hidden mt-2 flex-grow basis-[100%] items-center md:mt-0 lg:flex md:basis-auto">
@@ -23,10 +23,10 @@
 
       <div class="flex items-center">
         <AppButton secondary>View Portfolio</AppButton>
-        <AppButton class="mx-5 lg:ml-5">Direct Contact</AppButton>
+        <AppButton class="hidden md:block mx-5 lg:ml-5">Direct Contact</AppButton>
         <!-- Hamburger button for mobile view -->
         <button
-            class="block lg:hidden border-0 bg-transparent px-2 text-primary hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0"
+            class="block lg:hidden border-0 bg-transparent pl-4 text-primary hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0"
             type="button"
             data-te-collapse-init
             data-te-target="#navbarSupportedContent4"
@@ -74,7 +74,7 @@ import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
 import AppButton from '@/core/components/AppButton.vue'
 import AppDropdown from "../core/components/AppDropdown.vue";
 
-const showMobileMenu = ref(false)
+let showMobileMenu = ref(false)
 </script>
 
 <style scoped>
