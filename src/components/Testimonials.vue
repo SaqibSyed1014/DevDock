@@ -58,7 +58,7 @@ const clientLogos = [
 
 <style scoped lang="scss">
 .horizontal-slider{
-  animation-duration: 10s;
+  animation-duration: 15s;
   animation-iteration-count: infinite;
   animation-name: HSlider;
   animation-play-state: running;

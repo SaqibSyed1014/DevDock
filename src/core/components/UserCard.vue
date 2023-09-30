@@ -14,7 +14,7 @@
           <div class="text-[15px] opacity-5">{{ userDesc || 'N/A' }}</div>
         </figcaption>
       </figure>
-      <blockquote class="text-base pt-9 lg:pt-[50px] mx-auto mb-4">
+      <blockquote class="text-sm sm:text-base pt-9 lg:pt-[50px] mx-auto mb-4">
         <p>“{{ reviews || 'N/A' }}”</p>
       </blockquote>
     </div>

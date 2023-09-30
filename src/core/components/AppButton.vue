@@ -2,7 +2,7 @@
   <button
       type="button"
       :class="[secondary ? 'secondary-btn' : 'primary-btn']"
-      class="inline-block rounded py-3.5 px-[22px] text-sm font-medium leading-normal"
+      class="inline-block rounded py-3.5 px-4 md:px-[22px] text-sm font-medium leading-normal"
   >
     <span class="btn-bg" />
     <span class="btn-label">
