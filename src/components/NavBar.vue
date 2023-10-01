@@ -44,26 +44,41 @@
         </div>
       </div>
     </div>
-
   </nav>
 
   <div
       v-if="showMobileMenu"
-      class="w-full h-screen fixed top-[65px] left-0 z-[11111] flex justify-center items-center bg-white px-14 py-12"
+      class="mobile-nav w-full h-screen fixed overflow-hidden top-[65px] left-0 z-[11111] bg-white"
   >
-    <p class="text-center text-3xl font-bold">Coming Soon</p>
-    <!--      <ul class="list-style-none mr-auto pl-0 text-4xl flex flex-col text-sky mx-auto gap-y-20">-->
-    <!--        <li>-->
-    <!--          <AppDropdown :options="['Account', 'Settings']">Services</AppDropdown>-->
-    <!--        </li>-->
-    <!--        <li class="font-medium cursor-pointer px-2">Portfolio</li>-->
-    <!--        <li>-->
-    <!--          <AppDropdown :options="['Account', 'Settings']">Resources</AppDropdown>-->
-    <!--        </li>-->
-    <!--        <li>-->
-    <!--          <AppDropdown :options="['Account', 'Settings']">Company</AppDropdown>-->
-    <!--        </li>-->
-    <!--      </ul>-->
+    <hr>
+    <nav class="h-full overflow-auto">
+      <ul class="list-style-none mt-8 px-3" >
+        <li
+            v-for="(link, index) in menuLinks"
+            :key="index"
+        >
+          <p
+              class="menu-labels transition text-primary font-medium text-lg mb-3"
+              :style="{ '--index': index }"
+          >
+            {{ link.label }}
+          </p>
+          <ul
+              v-if="link.subLinks.length"
+              class="list-style-none mb-7"
+          >
+            <li
+                v-for="(subLink, i) in link.subLinks"
+                :key="i"
+                class="sub-menu-link transition text-sm py-2"
+                :style="{ '--subIndex': i }"
+            >
+              <router-link to="\">{{ subLink }}</router-link>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
   </div>
 </template>
 
@@ -80,6 +95,7 @@ const isScrollingDown = ref(false);
 
 // Function to handle scroll event
 const handleScroll = () => {
+  if (showMobileMenu.value) return
   const currentScrollY = window.scrollY;
   isScrollingDown.value = currentScrollY > scrollY.value;
   scrollY.value = currentScrollY;
@@ -93,6 +109,17 @@ onMounted(() => {
 onBeforeUnmount(() => {
   window.removeEventListener('scroll', handleScroll);
 })
+
+watch(showMobileMenu, (val) => {
+  if (val) document.body.style.overflow = 'hidden'
+})
+
+const menuLinks = [
+  { label: 'Services', subLinks: ['Account', 'Settings'] },
+  { label: 'Portfolio', subLinks: [] },
+  { label: 'Resources', subLinks: ['Account', 'Settings'] },
+  { label: 'Company', subLinks: ['Account', 'Settings'] }
+]
 </script>
 
 <style scoped lang="scss">
@@ -118,6 +145,36 @@ nav{
   }
   &.nav-fixed{
     transform: translateY(0);
+  }
+}
+.mobile-nav{
+  hr{
+    border: 1px solid #e0e5e6;
+    animation: slideRight .55s cubic-bezier(.215,.61,.355,1) forwards;
+  }
+  .menu-labels, .sub-menu-link {
+    opacity: 0;
+    transition: opacity .15s linear 0ms, transform .5s cubic-bezier(.215, .61, .355, 1) 0ms;
+  }
+  .menu-labels{
+    animation: linkListNavItem .7s calc(var(--index)*50ms) cubic-bezier(.19,1,.22,1) forwards;
+    transition-delay: calc(var(--index)*50ms);
+  }
+  .sub-menu-link{
+    animation: linkListNavItem .7s calc(var(--subIndex)*50ms) cubic-bezier(.19,1,.22,1) forwards;
+    transition-delay: calc(var(--subIndex)*80ms);
+  }
+  .sub-menu-link{
+    position: relative;
+    &::after{
+      border-bottom: 1px solid #bdedfc;
+      content: "";
+      height: 0;
+      left: 0;
+      bottom: 0;
+      position: absolute;
+      animation: slideRight .55s cubic-bezier(.215,.61,.355,1) forwards;
+    }
   }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
-  <section class="container mx-auto mb-28">
-    <h3 class="text-center text-3xl sm:text-5xl font-medium pb-20 sm:py-[100px] w-full lg:w-3/4 mx-auto">
+  <section class="container mx-auto mb-20 md:mb-28">
+    <h3 class="text-center text-3xl sm:text-5xl font-medium pt-20 pb-16 sm:py-[100px] w-full lg:w-3/4 mx-auto">
       4 <span class="text-pink">Reasons</span>, Why You Should Use DevDock to Build Product
     </h3>
 

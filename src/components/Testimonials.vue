@@ -30,7 +30,7 @@
       <div id="image" class="relative">
         <div class="flex flex-col justify-center rounded-lg rounded-xl lg:rounded-[40px] overflow-hidden">
           <img class="block md:hidden" src="/public/img/rocket.png" alt="Rocket">
-          <Parallaxy class="hidden md:block" speed="80" direction="opposite">
+          <Parallaxy class="hidden md:block" :speed="80" direction="opposite">
             <img class="parallax-effect" src="/public/img/rocket.png" alt="Rocket">
           </Parallaxy>
         </div>

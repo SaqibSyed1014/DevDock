@@ -83,15 +83,4 @@ const applyStyles = computed(() => {
   animation: linkListNavItem .4s calc(var(--index)*50ms) cubic-bezier(.19,1,.22,1) forwards;
   transition-delay: calc(var(--index)*50ms);
 }
-@keyframes linkListNavItem {
-  0% {
-    opacity: 0;
-    transform: translateY(20px)
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0)
-  }
-}
 </style>

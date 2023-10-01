@@ -1,0 +1,16 @@
+@keyframes linkListNavItem {
+  0% {
+    opacity: 0;
+    transform: translateY(20px)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+@keyframes slideRight {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
