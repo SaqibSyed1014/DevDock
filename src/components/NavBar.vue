@@ -15,11 +15,13 @@
       <!-- Collapsible navbar container -->
       <div class="hidden lg:flex items-center flex-grow basis-[100%] md:basis-auto md:mt-0 mt-2">
         <!-- Left links -->
-        <ul class="list-style-none mr-auto flex flex-col items-center pl-0 md:mt-1 md:flex-row gap-6">
+        <ul
+            class="list-style-none mr-auto flex flex-col items-center pl-0 md:mt-1 md:flex-row gap-6 text-[15px]"
+        >
           <li>
             <AppDropdown show-hover-color :options="['Account', 'Settings']">Services</AppDropdown>
           </li>
-          <li class="font-medium cursor-pointer px-4 hover:text-pink transition">Portfolio</li>
+          <li class="cursor-pointer px-4 hover:text-pink transition">Portfolio</li>
           <li>
             <AppDropdown show-hover-color :options="['Account', 'Settings']">Resources</AppDropdown>
           </li>

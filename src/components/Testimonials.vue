@@ -30,8 +30,8 @@
       <div id="image" class="relative">
         <div class="flex flex-col justify-center rounded-lg rounded-xl lg:rounded-[40px] overflow-hidden">
           <img class="block md:hidden" src="/public/img/rocket.png" alt="Rocket">
-          <Parallaxy class="hidden md:block" :speed="60" direction="opposite">
-            <img ref="bannerImage" class="parallax-effect" src="/public/img/rocket.png" alt="Rocket">
+          <Parallaxy class="hidden md:block" speed="80" direction="opposite">
+            <img class="parallax-effect" src="/public/img/rocket.png" alt="Rocket">
           </Parallaxy>
         </div>
         <div class="content-wrapper absolute left-3 md:left-10 top-0 flex flex-col justify-between h-full py-4 md:py-10">
@@ -66,7 +66,6 @@
 <script setup>
 import Parallaxy from '@lucien144/vue3-parallaxy';
 
-const bannerImage = ref(null)
 const clientLogos = [
   { name: 'shaoke.svg', alt: 'Shaoke' },
   { name: 'commkit.svg', alt: 'Commkit' },
@@ -74,9 +73,6 @@ const clientLogos = [
   { name: 'blackburt.svg', alt: 'BlackBurt' },
   { name: 'firetrust.svg', alt: 'FireTrust' }
 ]
-
-const addHover = () => bannerImage.value.style.transform = 'scale(1.2)'
-const removeHover = () => bannerImage.value.style.transform = 'scale(1.15)'
 </script>
 
 <style scoped lang="scss">
@@ -102,8 +98,11 @@ hr{
 }
 .video-banner{
   img.parallax-effect{
-    transform: scale(1.15);
+    transform: scale(1.14);
     transition: transform .95s cubic-bezier(.25,.46,.45,.94);
+  }
+  &:hover img.parallax-effect{
+    transform: scale(1.2);
   }
   .content-wrapper{
     width: -webkit-fill-available;
@@ -133,7 +132,7 @@ hr{
   & .btn-play-icon,.btn-bg::after{
     transition: transform .5s cubic-bezier(.19,1,.22,1);
   }
-  &:hover, &:focus{
+  &:hover{
     & .btn-bg {
       &::before {
         opacity: 1;

@@ -16,7 +16,7 @@
       </template>
     </div>
     <div class="text-center">
-      <AppButton>Direct Contract</AppButton>
+      <AppButton>Direct Contact</AppButton>
     </div>
   </section>
 </template>

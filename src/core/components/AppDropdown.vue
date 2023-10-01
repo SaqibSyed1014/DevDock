@@ -14,7 +14,7 @@
       >
         <slot />
         <span
-            class="ml-4 w-2 text-[#889BA0]"
+            class="ml-2 w-2 text-[#889BA0]"
             :class="{ 'group-hover:text-pink': showHoverColor }"
         >
           <svg

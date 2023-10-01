@@ -38,22 +38,34 @@
         </div>
         <div class="col-span-1">
           <h5 class="text-xl md:text-extra font-bold pb-6">Company</h5>
-          <div class="flex flex-col gap-3 md:gap-4">
-            <span v-for="link in companyLinks" :key="link" class="cursor-pointer">
+          <div class="flex flex-col gap-3 md:gap-4 text-sm">
+            <span
+                v-for="link in companyLinks"
+                :key="link"
+                class="cursor-pointer opacity-8 hover:opacity-10 transition"
+            >
               {{ link }} <span v-if="link === 'Hire Us'" class="i-ph-arrow-up-right-light w-5 h-5 translate-y-1" />
             </span>
           </div>
         </div>
         <div class="col-span-1">
           <h5 class="text-xl md:text-extra font-bold pb-6">Services</h5>
-          <div class="flex flex-col gap-3 md:gap-4">
-            <span v-for="link in servicesLinks" :key="link" class="cursor-pointer">{{ link }}</span>
+          <div class="flex flex-col gap-3 md:gap-4 text-sm">
+            <span
+                v-for="link in servicesLinks"
+                :key="link"
+                class="cursor-pointer opacity-8 hover:opacity-10 transition"
+            >{{ link }}</span>
           </div>
         </div>
         <div class="col-span-1">
           <h5 class="text-xl md:text-extra font-bold pb-6">Resources</h5>
-          <div class="flex flex-col gap-3 md:gap-4">
-            <span v-for="link in resourcesLinks" :key="link" class="cursor-pointer">{{ link }}</span>
+          <div class="flex flex-col gap-3 md:gap-4 text-sm">
+            <span
+                v-for="link in resourcesLinks"
+                :key="link"
+                class="cursor-pointer opacity-8 hover:opacity-10 transition"
+            >{{ link }}</span>
           </div>
         </div>
       </div>
@@ -67,7 +79,7 @@
         <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 text-sm">
           <img src="/public/img/logo-white.svg" alt="DevDock in White">
           <div>
-            <span class="border-r-2 border-[#1F5346] pr-5 mr-5">Privacy Policy</span>
+            <span class="border-r-2 border-[#1F5346] pr-3 mr-3">Privacy Policy</span>
             <span>Terms of Use</span>
           </div>
           <span>© Copyright {{ currentDate.getFullYear() }} ConvrtX. All Rights Reserved.</span></div>
@@ -109,7 +121,7 @@ const currentDate = new Date()
     height: 100%;
     display: block;
     opacity: 1;
-    background: linear-gradient(270deg, rgba(255, 222, 247, 0) 0.08%, rgba(255, 222, 247, 0.7) 17.2%, rgba(255, 222, 247, 0.9) 70.33%, rgba(255, 222, 247, 0) 78.5%, rgba(255, 222, 247, 1) 92.88%);
+    background: linear-gradient(270deg, rgba(255, 222, 247, 1) 0.08%, rgba(255, 222, 247, 0.5) 10.2%, rgba(255, 222, 247, 0.9) 17.2%, rgba(255, 222, 247, 0.9) 70.33%, rgba(255, 222, 247, 0.5) 78.5%, rgba(255, 222, 247, 1) 92.88%);
   }
 }
 </style>

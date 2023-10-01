@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-primary mb-28">
+  <section class="bg-primary">
     <div class="grid grid-cols-1 lg:grid-cols-2">
       <div class="flex items-center justify-center py-28 md:py-[149px]">
         <div class="w-full max-w-md px-2">

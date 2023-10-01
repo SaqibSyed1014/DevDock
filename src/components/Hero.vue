@@ -14,7 +14,7 @@
         </p>
         <div class="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8 pt-14">
           <AppButton class="fancy-btn">View Portfolio</AppButton>
-          <AppDropdown show-on-hover :options="['Account', 'Settings', 'Lol', 'DHHDHD', 'ldldooo']">
+          <AppDropdown show-on-hover :options="['Account', 'Settings']">
             Explore our Gallery
           </AppDropdown>
         </div>
