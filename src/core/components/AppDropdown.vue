@@ -1,10 +1,19 @@
 <template>
-  <Menu v-slot="{ open }" as="div" class="relative inline-block text-left">
-    <MenuButton class="flex items-center whitespace-nowrap text-base-white transition-colors duration-200 font-medium rounded px-2">
-      <slot />
-      <span class="ml-3.5 w-2">
+  <Menu v-slot="{ open }"
+      as="div"
+      class="relative inline-block text-left"
+      @mouseenter="showOnHover ? menuOpen = true : null"
+      @mouseleave="showOnHover ? menuOpen = false : null"
+        @click.stop="showOnHover ? null : menuOpen = !menuOpen"
+  >
+    <div class="py-2.5 pl-3 pr-4" :class="[applyStyles]">
+      <MenuButton
+          class="flex items-center whitespace-nowrap text-base-white transition-colors duration-200 font-medium"
+      >
+        <slot/>
+        <span class="ml-2 w-2">
         <svg
-            :class="[open?'rotate-180':'rotate-0']"
+            :class="[menuOpen ? 'rotate-180' : 'rotate-0']"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="#889BA0"
@@ -12,31 +21,67 @@
           <path
               fill-rule="evenodd"
               d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-              clip-rule="evenodd" />
+              clip-rule="evenodd"/>
         </svg>
     </span>
-    </MenuButton>
-    <MenuItems class="absolute z-[100] bg-white overflow-hidden left-0 mt-2 w-[144px] p-4 origin-top-right rounded-md shadow-md focus:outline-none">
-      <MenuItem v-for="(option, index) in options" :key="index">
-        <div class="hover:bg-transparent cursor-pointer">
-          {{ option }}
-        </div>
-      </MenuItem>
-    </MenuItems>
+      </MenuButton>
+      <MenuItems
+          v-show="menuOpen"
+          :static="true"
+          class="absolute flex flex-col gap-1 z-[100] bg-white w-full overflow-hidden left-0 px-3 pb-3 pt-2 origin-top-right rounded-b border-[1px] border-t-0 focus:outline-none"
+      >
+        <MenuItem v-for="(option, index) in options" :key="index">
+          <div
+              class="menu-option text-gray-400 hover:text-primary transition text-sm hover:bg-transparent cursor-pointer"
+              :style="{ '--index': index }"
+          >
+            {{ option }}
+          </div>
+        </MenuItem>
+      </MenuItems>
+    </div>
   </Menu>
 </template>
 
 <script setup lang="ts">
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
 import {defineProps} from "vue";
-defineProps({
+const props = defineProps({
   options: {
     type: Array,
     required: true
+  },
+  showOnHover: {
+    type: Boolean,
+    required: false
   }
+})
+
+const menuOpen = ref(false);
+
+const applyStyles = computed(() => {
+  let styles= 'bg-white outline outline-1 outline-slate-200 rounded-t'
+  if (props.showOnHover && menuOpen.value) return styles
+  if (menuOpen.value) return styles
+  else return ''
 })
 </script>
 
 <style scoped>
+.menu-option {
+  opacity: 0;
+  animation: linkListNavItem .4s calc(var(--index)*50ms) cubic-bezier(.19,1,.22,1) forwards;
+  transition-delay: calc(var(--index)*50ms);
+}
+@keyframes linkListNavItem {
+  0% {
+    opacity: 0;
+    transform: translateY(20px)
+  }
 
+  to {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
 </style>
