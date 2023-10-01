@@ -41,10 +41,13 @@ module.exports = {
       },
       height: {
         '18': '70px'
+      },
+      fontSize: {
+        'extra': '22px'
       }
     },
     container: {
-      padding: '.5rem',
+      padding: '1rem',
     },
   },
   plugins: [

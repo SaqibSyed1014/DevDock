@@ -1,6 +1,6 @@
 <template>
   <nav
-      class="nav-container w-full items-center py-1 px-3 md:px-7 z-[1111]"
+      class="nav-container w-full items-center py-2 lg:py-1 px-3 md:px-7 z-[1111]"
       :class="[showMobileMenu?'bg-white':'bg-sky', isScrollingDown ? 'nav-hidden':'nav-fixed']"
   >
     <div class="flex items-center justify-between">
@@ -13,13 +13,19 @@
       </figure>
 
       <!-- Collapsible navbar container -->
-      <div class="hidden mt-2 flex-grow basis-[100%] items-center md:mt-0 lg:flex md:basis-auto">
+      <div class="hidden lg:flex items-center flex-grow basis-[100%] md:basis-auto md:mt-0 mt-2">
         <!-- Left links -->
-        <ul class="list-style-none mr-auto flex flex-col pl-0 md:mt-1 md:flex-row gap-6">
-          <AppDropdown :options="['Account', 'Settings']">Services</AppDropdown>
-          <li class="font-medium cursor-pointer px-4">Portfolio</li>
-          <AppDropdown :options="['Account', 'Settings']">Resources</AppDropdown>
-          <AppDropdown :options="['Account', 'Settings']">Company</AppDropdown>
+        <ul class="list-style-none mr-auto flex flex-col items-center pl-0 md:mt-1 md:flex-row gap-6">
+          <li>
+            <AppDropdown show-hover-color :options="['Account', 'Settings']">Services</AppDropdown>
+          </li>
+          <li class="font-medium cursor-pointer px-4 hover:text-pink transition">Portfolio</li>
+          <li>
+            <AppDropdown show-hover-color :options="['Account', 'Settings']">Resources</AppDropdown>
+          </li>
+          <li>
+            <AppDropdown show-hover-color :options="['Account', 'Settings']">Company</AppDropdown>
+          </li>
         </ul>
       </div>
 
@@ -27,7 +33,7 @@
         <AppButton secondary class="shrink-0">View Portfolio</AppButton>
         <AppButton class="hidden lg:block mx-5 lg:ml-5">Direct Contact</AppButton>
         <!-- Hamburger button for mobile view -->
-        <div class="flex md:hidden items-center pl-4 pr-2 text-primary" @click="showMobileMenu = !showMobileMenu">
+        <div class="flex lg:hidden items-center pl-4 pr-2 text-primary" @click="showMobileMenu = !showMobileMenu">
           <span v-if="!showMobileMenu" class="i-solar-hamburger-menu-linear w-9 h-9" />
           <span
               v-else
@@ -41,7 +47,7 @@
 
   <div
       v-if="showMobileMenu"
-      class="w-full h-screen fixed top-[75px] left-0 z-[11111] flex justify-center items-center bg-white px-14 py-12"
+      class="w-full h-screen fixed top-[65px] left-0 z-[11111] flex justify-center items-center bg-white px-14 py-12"
   >
     <p class="text-center text-3xl font-bold">Coming Soon</p>
     <!--      <ul class="list-style-none mr-auto pl-0 text-4xl flex flex-col text-sky mx-auto gap-y-20">-->

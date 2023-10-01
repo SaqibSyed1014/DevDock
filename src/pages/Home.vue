@@ -8,5 +8,4 @@
   <Features />
   <Trust />
   <Reviews />
-  <Footer />
 </template>

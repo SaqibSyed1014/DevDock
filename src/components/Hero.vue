@@ -13,7 +13,7 @@
           Focus only on <span class="underlines-word">productivity</span> now
         </p>
         <div class="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8 pt-14">
-          <AppButton class="fancy-btn mr-5">View Portfolio</AppButton>
+          <AppButton class="fancy-btn">View Portfolio</AppButton>
           <AppDropdown show-on-hover :options="['Account', 'Settings', 'Lol', 'DHHDHD', 'ldldooo']">
             Explore our Gallery
           </AppDropdown>

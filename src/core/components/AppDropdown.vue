@@ -1,32 +1,38 @@
 <template>
-  <Menu v-slot="{ open }"
+  <Menu
+      v-slot="{ open }"
       as="div"
       class="relative inline-block text-left"
       @mouseenter="showOnHover ? menuOpen = true : null"
       @mouseleave="showOnHover ? menuOpen = false : null"
-        @click.stop="showOnHover ? null : menuOpen = !menuOpen"
+      @click.stop="showOnHover ? null : menuOpen = !menuOpen"
   >
-    <div class="py-2.5 pl-3 pr-4" :class="[applyStyles]">
+    <div class="py-2.5 pl-3 pr-5" :class="[applyStyles]">
       <MenuButton
-          class="flex items-center whitespace-nowrap text-base-white transition-colors duration-200 font-medium"
+          class="group flex items-center whitespace-nowrap text-base-white transition-colors duration-200 font-medium"
+          :class="{ 'hover:text-pink': showHoverColor }"
       >
-        <slot/>
-        <span class="ml-2 w-2">
-        <svg
-            :class="[menuOpen ? 'rotate-180' : 'rotate-0']"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="#889BA0"
-            class="h-5 w-5 transition duration-200">
-          <path
-              fill-rule="evenodd"
-              d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-              clip-rule="evenodd"/>
-        </svg>
-    </span>
+        <slot />
+        <span
+            class="ml-4 w-2 text-[#889BA0]"
+            :class="{ 'group-hover:text-pink': showHoverColor }"
+        >
+          <svg
+              :class="[menuOpen ? 'rotate-180' : 'rotate-0']"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              class="h-5 w-5 transition duration-200">
+            <path
+                stroke="currentColor"
+                fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                clip-rule="evenodd"/>
+          </svg>
+        </span>
       </MenuButton>
       <MenuItems
-          v-show="menuOpen"
+          v-show="menuOpen ?? open"
           :static="true"
           class="absolute flex flex-col gap-1 z-[100] bg-white w-full overflow-hidden left-0 px-3 pb-3 pt-2 origin-top-right rounded-b border-[1px] border-t-0 focus:outline-none"
       >
@@ -52,6 +58,10 @@ const props = defineProps({
     required: true
   },
   showOnHover: {
+    type: Boolean,
+    required: false
+  },
+  showHoverColor: {
     type: Boolean,
     required: false
   }

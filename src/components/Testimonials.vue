@@ -1,8 +1,8 @@
 <template>
-  <section class="bg-sky py-16">
+  <section class="bg-sky pb-10 lg:py-16">
     <div class="container mx-auto lg:mb-20">
       <div class="grid grid-rows-2 grid-cols-1 lg:grid-rows-1 lg:grid-cols-2 gap-2 lg:gap-5 text-primary">
-        <p class="sm:text-lg">
+        <p class="text-center lg:text-left sm:text-lg">
           We are a collaborative team. We do offer solid core values and a intention meant to provide solutions, a
           dream come actual growth for the business.
         </p>
@@ -26,11 +26,11 @@
         </div>
       </div>
     </div>
-    <div class="video-banner md:px-7">
+    <div class="video-banner px-3 md:px-7">
       <div id="image" class="relative">
-        <div class="flex flex-col justify-center rounded-lg md:rounded-[40px] overflow-hidden">
+        <div class="flex flex-col justify-center rounded-lg rounded-xl lg:rounded-[40px] overflow-hidden">
           <img class="block md:hidden" src="/public/img/rocket.png" alt="Rocket">
-          <Parallaxy class="hidden md:block" :speed="65" direction="opposite">
+          <Parallaxy class="hidden md:block" :speed="60" direction="opposite">
             <img ref="bannerImage" class="parallax-effect" src="/public/img/rocket.png" alt="Rocket">
           </Parallaxy>
         </div>
@@ -76,7 +76,7 @@ const clientLogos = [
 ]
 
 const addHover = () => bannerImage.value.style.transform = 'scale(1.2)'
-const removeHover = () => bannerImage.value.style.transform = 'scale(1.1)'
+const removeHover = () => bannerImage.value.style.transform = 'scale(1.15)'
 </script>
 
 <style scoped lang="scss">
@@ -102,7 +102,7 @@ hr{
 }
 .video-banner{
   img.parallax-effect{
-    transform: scale(1.1);
+    transform: scale(1.15);
     transition: transform .95s cubic-bezier(.25,.46,.45,.94);
   }
   .content-wrapper{

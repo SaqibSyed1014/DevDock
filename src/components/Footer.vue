@@ -8,7 +8,7 @@
           <p class="text-center md:text-left text-primary font-medium text-xl sm:text-2xl md:text-[32px] md:pl-[15px]">
             Help us spread the word and sell good vibes. Follow!</p>
         </div>
-        <div class="flex ml-auto gap-4 text-primary">
+        <div class="flex mx-auto lg:mr-0 gap-4 text-primary">
           <div class="flex justify-center items-center rounded bg-white cursor-pointer w-10 h-10">
             <span class="i-ri-facebook-fill w-6 h-6" />
           </div>
@@ -32,27 +32,27 @@
       <div class="grid grid-cols-2 lg:grid-cols-5 gap-16 text-white">
         <div class="col-span-1 lg:col-span-2">
           <label class="text-[15px]">Email</label>
-          <p class="text-[22px] font-bold pt-3 pb-6">hello@devdock.com</p>
+          <p class="text-xl md:text-extra font-bold pt-3 pb-6">hello@devdock.com</p>
           <label class="text-[15px]">Whatsapp</label>
-          <p class="text-[22px] font-bold pt-3">+92 (331) 4709729</p>
+          <p class="text-xl md:text-extra font-bold pt-3">+92 (331) 4709729</p>
         </div>
         <div class="col-span-1">
-          <h5 class="text-[22px] font-bold pb-6">Company</h5>
-          <div class="flex flex-col gap-4">
+          <h5 class="text-xl md:text-extra font-bold pb-6">Company</h5>
+          <div class="flex flex-col gap-3 md:gap-4">
             <span v-for="link in companyLinks" :key="link" class="cursor-pointer">
               {{ link }} <span v-if="link === 'Hire Us'" class="i-ph-arrow-up-right-light w-5 h-5 translate-y-1" />
             </span>
           </div>
         </div>
         <div class="col-span-1">
-          <h5 class="text-[22px] font-bold pb-6">Services</h5>
-          <div class="flex flex-col gap-4">
+          <h5 class="text-xl md:text-extra font-bold pb-6">Services</h5>
+          <div class="flex flex-col gap-3 md:gap-4">
             <span v-for="link in servicesLinks" :key="link" class="cursor-pointer">{{ link }}</span>
           </div>
         </div>
         <div class="col-span-1">
-          <h5 class="text-[22px] font-bold pb-6">Resources</h5>
-          <div class="flex flex-col gap-4">
+          <h5 class="text-xl md:text-extra font-bold pb-6">Resources</h5>
+          <div class="flex flex-col gap-3 md:gap-4">
             <span v-for="link in resourcesLinks" :key="link" class="cursor-pointer">{{ link }}</span>
           </div>
         </div>
@@ -62,7 +62,7 @@
 
     <hr class="border-t border-[#7EABA0]">
 
-    <div class="copy-right py-[26px]">
+    <div class="copy-right py-5 md:py-[26px]">
       <div class="container mx-auto text-center text-white">
         <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 text-sm">
           <img src="/public/img/logo-white.svg" alt="DevDock in White">
