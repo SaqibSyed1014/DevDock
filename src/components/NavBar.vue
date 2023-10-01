@@ -112,6 +112,7 @@ onBeforeUnmount(() => {
 
 watch(showMobileMenu, (val) => {
   if (val) document.body.style.overflow = 'hidden'
+  else document.body.style.overflow = 'auto'
 })
 
 const menuLinks = [

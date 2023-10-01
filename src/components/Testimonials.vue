@@ -62,7 +62,7 @@
         class="video-player transition fixed z-[1111111] md:p-36 lg:p-64 top-0 left-0 w-full h-screen overflow-hidden flex justify-center items-center">
       <div @click="playVideo = false" class="bg-primary w-full h-full absolute top-0 left-0"></div>
       <div class="video-container relative">
-        <video class="block w-auto h-auto max-h-full max-w-full" controls autoplay playsinline disableremoteplayback
+        <video class="block h-full w-full" controls autoplay playsinline disableremoteplayback
                src="https://www.surfe.com/wp-content/uploads/2023/06/Product-tour.mp4"/>
         <button
             class="close-btn fixed md:absolute top-5 right-5 md:-top-5 md:-right-5 flex justify-center items-center rounded-full w-12 h-12 md:w-10 md:h-10 cursor-pointer"
@@ -90,6 +90,7 @@ const clientLogos = [
 
 watch(playVideo, (val) => {
   if (val) document.body.style.overflow = 'hidden'
+  else document.body.style.overflow = 'auto'
 })
 </script>
 
