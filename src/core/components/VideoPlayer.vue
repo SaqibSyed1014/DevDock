@@ -19,11 +19,11 @@
             :src="vidSource"
         />
         <button
-            class="close-btn fixed md:absolute top-5 right-5 md:-top-5 md:-right-5 flex justify-center items-center rounded-full w-12 h-12 md:w-10 md:h-10 cursor-pointer"
+            class="close-btn fixed md:absolute top-5 right-5 md:-top-5 md:-right-5 flex justify-center items-center rounded-full w-12 h-12 md:w-10 md:h-10 2xl:w-14 2xl:h-14 cursor-pointer"
             @click="$emit('update:display', false)"
         >
           <div class="btn-bg"/>
-          <span class="btn-control-icon text-white i-ph-x w-8 h-8 md:w-6 md:h-6"/>
+          <span class="btn-control-icon text-white i-ph-x w-8 h-8 md:w-6 md:h-6 2xl:w-8 2xl:h-8" />
         </button>
       </div>
     </div>
@@ -47,7 +47,7 @@ defineEmits(['update:display'])
 <style scoped lang="scss">
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s cubic-bezier(.19,1,.22,1);
+  transition: opacity .7s cubic-bezier(.19,1,.22,1) .3s;
 }
 
 .fade-enter-from,

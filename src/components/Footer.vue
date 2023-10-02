@@ -79,8 +79,8 @@
         <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 text-sm">
           <img src="/public/img/logo-white.svg" alt="DevDock in White">
           <div>
-            <span class="border-r-2 border-[#1F5346] pr-3 mr-3">Privacy Policy</span>
-            <span>Terms of Use</span>
+            <span class="cursor-pointer border-r-2 border-[#1F5346] pr-3 mr-3">Privacy Policy</span>
+            <span class="cursor-pointer">Terms of Use</span>
           </div>
           <span>© Copyright {{ currentDate.getFullYear() }} ConvrtX. All Rights Reserved.</span></div>
       </div>
