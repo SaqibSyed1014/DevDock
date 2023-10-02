@@ -2,7 +2,7 @@
   <transition name="fade">
     <div
         v-if="display"
-        class="video-player transition fixed z-[1111111] md:p-36 lg:p-64 top-0 left-0 w-full h-screen overflow-hidden flex justify-center items-center"
+        class="video-player transition fixed z-50 md:p-36 lg:p-64 top-0 left-0 w-full h-screen overflow-hidden flex justify-center items-center"
     >
       <div
           class="bg-primary w-full h-full absolute top-0 left-0"
@@ -45,16 +45,6 @@ defineEmits(['update:display'])
 </script>
 
 <style scoped lang="scss">
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity .7s cubic-bezier(.19,1,.22,1) .3s;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-
 .close-btn{
   & .btn-bg {
     &::before {
