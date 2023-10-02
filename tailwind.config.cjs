@@ -48,6 +48,7 @@ module.exports = {
     },
     container: {
       padding: '1rem',
+      center: true
     },
   },
   plugins: [

@@ -1,6 +1,6 @@
 <template>
   <section class="bg-sky pb-10 lg:py-16">
-    <div class="container mx-auto lg:mb-20">
+    <div class="container lg:mb-20">
       <div class="grid grid-rows-2 grid-cols-1 lg:grid-rows-1 lg:grid-cols-2 gap-2 lg:gap-5 text-primary">
         <p class="text-center lg:text-left sm:text-lg">
           We are a collaborative team. We do offer solid core values and a intention meant to provide solutions, a
@@ -56,28 +56,15 @@
     </div>
   </section>
 
-  <transition name="fade">
-    <div
-        v-if="playVideo"
-        class="video-player transition fixed z-[1111111] md:p-36 lg:p-64 top-0 left-0 w-full h-screen overflow-hidden flex justify-center items-center">
-      <div @click="playVideo = false" class="bg-primary w-full h-full absolute top-0 left-0"></div>
-      <div class="video-container relative">
-        <video class="block h-full w-full" controls autoplay playsinline disableremoteplayback
-               src="https://www.surfe.com/wp-content/uploads/2023/06/Product-tour.mp4"/>
-        <button
-            class="close-btn fixed md:absolute top-5 right-5 md:-top-5 md:-right-5 flex justify-center items-center rounded-full w-12 h-12 md:w-10 md:h-10 cursor-pointer"
-            @click="playVideo = false"
-        >
-          <div class="btn-bg"/>
-          <span class="btn-control-icon text-white i-ph-x w-8 h-8 md:w-6 md:h-6"/>
-        </button>
-      </div>
-    </div>
-  </transition>
+  <VideoPlayer
+      v-model:display="playVideo"
+      vid-source="https://www.surfe.com/wp-content/uploads/2023/06/Product-tour.mp4"
+  />
 </template>
 
 <script setup>
 import Parallaxy from '@lucien144/vue3-parallaxy';
+import VideoPlayer from '@/core/components/VideoPlayer.vue'
 
 const playVideo = ref(false)
 const clientLogos = [
@@ -95,17 +82,6 @@ watch(playVideo, (val) => {
 </script>
 
 <style scoped lang="scss">
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s cubic-bezier(.19,1,.22,1);
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-
-
 .horizontal-slider{
   animation-duration: 15s;
   animation-iteration-count: infinite;
@@ -115,14 +91,7 @@ watch(playVideo, (val) => {
   flex: 0 0 auto;
   flex-wrap: nowrap;
 }
-@keyframes HSlider {
-  0%{
-    transform: translateX(0);
-  }
-  100%{
-    transform: translateX(-100%);
-  }
-}
+
 hr{
   border-top: 1px solid #BDEDFC;
 }
@@ -138,6 +107,7 @@ hr{
     width: -webkit-fill-available;
   }
 }
+
 .play-btn{
   & .btn-bg {
     &::before {
@@ -148,51 +118,5 @@ hr{
     }
   }
 }
-.close-btn{
-  & .btn-bg {
-    &::before {
-      background-color: #fff;
-    }
-    &::after{
-      background-color: #ff9254;
-    }
 
-  }
-}
-.play-btn, .close-btn{
-  & .btn-bg{
-    &::after, &::before{
-      border-radius: 100%;
-      content: "";
-      display: block;
-      height: 100%;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 100%;
-    }
-    &::before{
-      opacity: 0;
-      transition: opacity 0ms linear .5s;
-    }
-  }
-  & .btn-control-icon,.btn-bg::after{
-    transition: transform .5s cubic-bezier(.19,1,.22,1);
-  }
-  &:hover{
-    & .btn-bg {
-      &::before {
-        opacity: 1;
-        transition: opacity 0ms linear;
-      }
-
-      &::after, {
-        transform: translate3d(-2px, -2px, 0);
-      }
-    }
-    & .btn-control-icon{
-      transform: translate3d(-2px, -2px, 0);
-    }
-  }
-}
 </style>

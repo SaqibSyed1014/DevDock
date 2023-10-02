@@ -28,7 +28,7 @@
       </div>
     </div>
 
-    <div class="container mx-auto py-10">
+    <div class="container py-10">
       <div class="grid grid-cols-2 lg:grid-cols-5 gap-16 text-white">
         <div class="col-span-1 lg:col-span-2">
           <label class="text-[15px]">Email</label>
@@ -75,7 +75,7 @@
     <hr class="border-t border-[#7EABA0]">
 
     <div class="copy-right py-5 md:py-[26px]">
-      <div class="container mx-auto text-center text-white">
+      <div class="container text-center text-white">
         <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 text-sm">
           <img src="/public/img/logo-white.svg" alt="DevDock in White">
           <div>

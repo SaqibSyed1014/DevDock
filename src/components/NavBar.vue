@@ -1,6 +1,6 @@
 <template>
   <nav
-      class="nav-container w-full items-center py-2 lg:py-1 px-3 md:px-7 z-[1111]"
+      class="nav-container w-full items-center py-2 lg:py-3 px-3 md:px-7 z-[1111]"
       :class="[showMobileMenu?'bg-white':'bg-sky', isScrollingDown ? 'nav-hidden':'nav-fixed']"
   >
     <div class="flex items-center justify-between">
@@ -14,9 +14,8 @@
 
       <!-- Collapsible navbar container -->
       <div class="hidden lg:flex items-center flex-grow basis-[100%] md:basis-auto md:mt-0 mt-2">
-        <!-- Left links -->
         <ul
-            class="list-style-none mr-auto flex flex-col items-center pl-0 md:mt-1 md:flex-row gap-6 text-[15px]"
+            class="list-style-none mr-auto flex flex-col items-center pl-0 md:mt-1 md:flex-row gap-6 text-[15px] font-medium"
         >
           <li>
             <AppDropdown show-hover-color :options="['Account', 'Settings']">Services</AppDropdown>
@@ -33,7 +32,7 @@
 
       <div class="flex items-center">
         <AppButton secondary class="shrink-0">View Portfolio</AppButton>
-        <AppButton class="hidden lg:block mx-5 lg:ml-5">Direct Contact</AppButton>
+        <AppButton class="hidden lg:block shrink-0 mx-5 lg:ml-5">Direct Contact</AppButton>
         <!-- Hamburger button for mobile view -->
         <div class="flex lg:hidden items-center pl-4 pr-2 text-primary" @click="showMobileMenu = !showMobileMenu">
           <span v-if="!showMobileMenu" class="i-solar-hamburger-menu-linear w-9 h-9" />
@@ -46,48 +45,72 @@
     </div>
   </nav>
 
+  <!-- Mobile Navbar -->
   <div
       v-if="showMobileMenu"
-      class="mobile-nav w-full h-screen fixed overflow-hidden top-[65px] left-0 z-[11111] bg-white"
+      class="mobile-nav w-full h-screen fixed overflow-hidden top-[75px] left-0 z-[11111] bg-white"
   >
     <hr>
     <nav class="h-full overflow-auto">
-      <ul class="list-style-none mt-8 px-3" >
-        <li
-            v-for="(link, index) in menuLinks"
-            :key="index"
-        >
-          <p
-              class="menu-labels transition text-primary font-medium text-lg mb-3"
-              :style="{ '--index': index }"
+      <div class="mobile-nav-container my-8 px-3">
+        <ul class="list-style-none">
+          <li
+              v-for="(link, index) in menuLinks"
+              :key="index"
           >
-            {{ link.label }}
-          </p>
-          <ul
-              v-if="link.subLinks.length"
-              class="list-style-none mb-7"
-          >
-            <li
-                v-for="(subLink, i) in link.subLinks"
-                :key="i"
-                class="sub-menu-link transition text-sm py-2"
-                :style="{ '--subIndex': i }"
+            <p
+                class="menu-labels transition text-primary font-medium text-lg mb-3"
+                :style="{ '--index': index }"
             >
-              <router-link to="\">{{ subLink }}</router-link>
-            </li>
-          </ul>
-        </li>
-      </ul>
+              {{ link.label }}
+            </p>
+            <ul
+                v-if="link.subLinks.length"
+                class="list-style-none mb-7"
+            >
+              <li
+                  v-for="(subLink, i) in link.subLinks"
+                  :key="i"
+                  class="sub-menu-link transition text-sm py-2"
+                  :style="{ '--subIndex': i }"
+              >
+                <router-link to="\">{{ subLink }}</router-link>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="nav-image relative pt-3">
+          <div class="nav-image-container overflow-hidden rounded-2xl" @click="playDemoVideo = true">
+            <img src="/public/img/rocket.png" alt="Rocket">
+          </div>
+          <div class="absolute top-[50%] left-[50%] -translate-y-2/4 -translate-x-2/4">
+            <button
+                class="play-btn bg-white flex justify-center items-center rounded-full w-14 h-14 md:w-16 md:h-16 cursor-pointer"
+            >
+              <span class="btn-control-icon i-mdi-play text-pink w-9 h-9 md:w-10 md:h-10" />
+            </button>
+          </div>
+          <h4 class="text-base absolute bottom-5 left-5 text-white font-bold">Product Tour</h4>
+        </div>
+      </div>
     </nav>
   </div>
+
+  <video-player
+      v-model:display="playDemoVideo"
+      vid-source="https://www.surfe.com/wp-content/uploads/2023/06/Product-tour.mp4"
+  />
 </template>
 
 <script setup>
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
 import AppButton from '@/core/components/AppButton.vue'
-import AppDropdown from "../core/components/AppDropdown.vue";
+import AppDropdown from "@/core/components/AppDropdown.vue"
+import VideoPlayer from '@/core/components/VideoPlayer.vue'
 
 let showMobileMenu = ref(false)
+const playDemoVideo = ref(false)
 
 // Variables to track scroll position
 const scrollY = ref(window.scrollY);
@@ -95,10 +118,10 @@ const isScrollingDown = ref(false);
 
 // Function to handle scroll event
 const handleScroll = () => {
-  if (showMobileMenu.value) return
-  const currentScrollY = window.scrollY;
-  isScrollingDown.value = currentScrollY > scrollY.value;
-  scrollY.value = currentScrollY;
+  if (!showMobileMenu.value && window.scrollY >= 450) {
+    isScrollingDown.value = window.scrollY > scrollY.value;
+    scrollY.value = window.scrollY;
+  }
 };
 
 // Attach and remove scroll event listeners
@@ -162,7 +185,7 @@ nav{
     transition-delay: calc(var(--index)*50ms);
   }
   .sub-menu-link{
-    animation: linkListNavItem .7s calc(var(--subIndex)*50ms) cubic-bezier(.19,1,.22,1) forwards;
+    animation: linkListNavItem 1s calc(var(--subIndex)*80ms) cubic-bezier(.19,1,.22,1) forwards;
     transition-delay: calc(var(--subIndex)*80ms);
   }
   .sub-menu-link{

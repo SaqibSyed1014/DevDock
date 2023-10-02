@@ -25,8 +25,8 @@
                   </span>
                   <div class="pt-10 group-hover:pt-6">
                     <img :src="`/img/${service.icon}`" :alt="service.alt">
-                    <div class="flex gap-3 md:gap-8 justify-between items-center pt-5">
-                      <h3 class="text-2xl sm:text-2xl md:text-3xl font-medium md:pr-5 group-hover:text-black group-hover:mb-2">
+                    <div class="flex gap-3 xl:gap-8 justify-between items-center pt-5">
+                      <h3 class="text-2xl sm:text-2xl md:text-2xl xl:text-3xl font-medium sm:pr-5 group-hover:text-black group-hover:mb-2">
                         {{ service.title }}
                       </h3>
                       <span class="i-mdi-arrow-right w-9 h-9 md:w-12 md:h-12 group-hover:hidden" />

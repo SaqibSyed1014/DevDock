@@ -1,5 +1,5 @@
 <template>
-  <section class="container mx-auto py-20">
+  <section class="container py-20">
     <h3 class="text-3xl sm:text-5xl font-medium mx-auto text-center pb-14 w-full lg:w-2/4">
       See what our founders are saying!
     </h3>

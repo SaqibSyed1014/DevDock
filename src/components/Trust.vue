@@ -1,5 +1,5 @@
 <template>
-  <section class="container mx-auto pb-10">
+  <section class="container pb-10">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
       <div>
         <h3 class="text-3xl sm:text-5xl text-center lg:text-left font-medium text-primary !leading-normal">
